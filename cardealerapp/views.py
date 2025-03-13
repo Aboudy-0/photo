@@ -7,9 +7,6 @@ def index(request):
 def about(request):
   return render(request,'about.html')
 
-def contact(request):
-  return render(request,'contact.html')
-
 def gallery(request):
   return render(request,'gallery.html')
 
@@ -22,3 +19,5 @@ def services(request):
 def starter(request):
   return render(request,'starter-page.html')
 
+def contact(request):
+   return render(request,'contact.html')
