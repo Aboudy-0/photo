@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+
+from cardealerapp.models import Contact
+
 
 # Create your views here.
 def index(request):
@@ -20,4 +23,14 @@ def starter(request):
   return render(request,'starter-page.html')
 
 def contact(request):
-   return render(request,'contact.html')
+    if request.method == "POST":
+        mycontact = Contact(
+            name = request.POST['name'],
+            email = request.POST['email'],
+            subject = request.POST['subject'],
+            message = request.POST['message'],
+        )
+        mycontact.save()
+        return redirect('/contact')
+    else:
+        return render(request, 'contact.html')
