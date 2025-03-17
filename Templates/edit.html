@@ -8,7 +8,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Edit Appointment</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -30,30 +30,18 @@
             <div class="col-md-4 form-group mt-3">
               <input type="datetime-local" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date" required="">
             </div>
-            <div class="col-md-4 form-group mt-3">
+             <div class="col-md-4 form-group mt-3">
               <select name="department" id="department" class="form-select" required="">
-                <option value="">Select Department</option>
-
-                <option value="Department 1" {% if editinfo.department == "Department 1" %}selected{% endif %}>Department 1</option>
-
-                <option value="Department 2" {% if editinfo.department == "Department 2" %}selected{% endif %}>Department 2</option>
-
-                <option value="Department 3" {% if editinfo.department == "Department 3" %}selected{% endif %}>Department 3</option>
-
+                <option value="">Select Photograph</option>
+                <option value="Portrait Photography----Ksh.20712.00 " {% if editinfo.department == "Portrait Photography----Ksh.20712.00" %}selected{% endif %}>Portrait Photography----Ksh.20712.00</option>
+                <option value="Sports Photography----Ksh.25890.00" {% if editinfo.department == "Sports Photography----Ksh.25890.00" %}selected{% endif %}>Sports Photography----Ksh.25890.00</option>
+                <option value="Wedding Photography----Ksh.64725.00" {% if editinfo.department == "Wedding Photography----Ksh.64725.00" %}selected{% endif %}>Wedding Photography----Ksh.64725.00</option>
+                <option value="Fashion Photography----Ksh.38835.00" {% if editinfo.department == "Fashion Photography----Ksh.38835.00" %}selected{% endif %}>Fashion Photography----Ksh.38835.00</option>
+                <option value="Still Life Photography----Ksh.15534.00" {% if editinfo.department == "Still Life Photography----Ksh.15534.00" %}selected{% endif %}>Still Life Photography----Ksh.15534.00</option>
+                <option value="Photojournalism----Ksh.25890.00" {% if editinfo.department == "Photojournalism----Ksh.25890.00" %}selected{% endif %}>Photojournalism----Ksh.25890.00</option>
               </select>
             </div>
-            <div class="col-md-4 form-group mt-3">
-              <select name="doctor" id="doctor" class="form-select" required="">
-                <option value="">Select Doctor</option>
 
-                <option value="Doctor 1" {% if editinfo.doctor == "Doctor 1" %}selected{% endif %}>Doctor 1</option>
-
-                <option value="Doctor 2" {% if editinfo.doctor == "Doctor 2" %}selected{% endif %}>Doctor 2</option>
-
-                <option value="Doctor 3" {% if editinfo.doctor == "Doctor 3" %}selected{% endif %}>Doctor 3</option>
-
-              </select>
-            </div>
           </div>
 
           <div class="form-group mt-3">
