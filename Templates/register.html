@@ -1,13 +1,21 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/register.css' %}">
-<div class="col-md-4 col-md-offset-4" id="login">
-						<section id="inner-wrapper" class="login">
-							<article>
-								<form method="post">
+
+
+<div class="sidenav">
+         <div class="login-main-text">
+            <h2>Application<br> Register Page</h2>
+            <p>Login or register from here to access.</p>
+         </div>
+      </div>
+      <div class="main">
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+               <form method="post">
                                     {% csrf_token %}
 									<div class="form-group">
 										<div class="input-group">
@@ -27,10 +35,11 @@
 											<input type="password" name="confirm_password" class="form-control" placeholder="Confirm Password">
 										</div>
 									</div>
-									  <button type="submit" class="btn btn-success btn-block">Submit</button>
+									  <button type="submit" class="btn btn-dark btn-block">Submit</button>
                                     <br><br>
-                                    <p class="text-center">Have an account? <a href="{% url 'login' %}">Log In</a> </p>
+                                    <p class="text-center text-white">Have an account? <a href="{% url 'login' %}">Log In</a> </p>
 
 								</form>
-							</article>
-						</section></div>
+            </div>
+         </div>
+      </div>

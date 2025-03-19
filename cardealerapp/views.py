@@ -31,6 +31,24 @@ def services(request):
 def starter(request):
   return render(request,'starter-page.html')
 
+def nature(request):
+   return render(request, 'nature.html')
+
+def people(request):
+   return render(request, 'people.html')
+
+def architecture(request):
+   return render(request, 'architecture.html')
+
+def animals(request):
+   return render(request, 'animals.html')
+
+def sports(request):
+   return render(request, 'sports.html')
+
+def travel(request):
+   return render(request, 'travel.html')
+
 
 def appointment(request):
     if request.method == "POST":
