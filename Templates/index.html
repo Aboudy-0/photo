@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>PhotoVista</title>
+  <title>PixelVista</title>
   {% load static %}
   <meta name="description" content="">
   <meta name="keywords" content="">
@@ -29,8 +29,8 @@
   <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
 
   <!-- =======================================================
-  * Template Name: PhotoFolio
-  * Template URL: https://bootstrapmade.com/photofolio-bootstrap-photography-website-template/
+  * Template Name: PixelVista
+  * Template URL: https://bootstrapmade.com/PixelVista-bootstrap-photography-website-template/
   * Updated: Aug 07 2024 with Bootstrap v5.3.3
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
@@ -46,7 +46,7 @@
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
         <i class="bi bi-camera"></i>
-        <h1 class="sitename">PhotoVista</h1>
+        <h1 class="sitename">PixelVista</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -55,21 +55,12 @@
           <li><a href="{%url 'about'%}">About</a></li>
           <li class="dropdown"><a href="{%url 'gallery'%}"><span>Gallery</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="{% url '' %}">Nature</a></li>
-              <li><a href="gallery.html">People</a></li>
-              <li><a href="gallery.html">Architecture</a></li>
-              <li><a href="gallery.html">Animals</a></li>
-              <li><a href="gallery.html">Sports</a></li>
-              <li><a href="gallery.html">Travel</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
+              <li><a href="{% url 'nature' %}">Nature</a></li>
+              <li><a href="{% url 'people' %}">People</a></li>
+              <li><a href="{% url 'architecture' %}">Architecture</a></li>
+              <li><a href="{% url 'animals' %}">Animals</a></li>
+              <li><a href="{% url 'sports' %}">Sports</a></li>
+              <li><a href="{% url 'travel' %}">Travel</a></li>
             </ul>
           </li>
           <li><a href="{%url 'services'%}">Services</a></li>
@@ -97,7 +88,7 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6 text-center" data-aos="fade-up" data-aos-delay="100">
-            <h2><span>We are </span><span class="underlight">PhotoVista</span> <span> Photography studio in Nairobi,Kenya</span></h2>
+            <h2><span>We are </span><span class="underlight">PixelVista</span> <span> Photography studio in Nairobi,Kenya</span></h2>
             <p>We help you capture memories</p>
             <a href="{%url 'appointment'%}" class="btn-get-started">Available for Hire<br></a>
           </div>
@@ -117,8 +108,8 @@
             <div class="gallery-item h-100">
               <img src="{% static 'assets/img/gallery/gallery-1.jpg' %}" class="img-fluid" alt="">
               <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="{% static 'assets/img/gallery/gallery-1.jpg' %}" title="Gallery 2" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="{%url 'gallery_single'%}" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="{% static 'assets/img/gallery/gallery-1.jpg' %}" title="Gallery 1" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                <a href="{%url 'nature'%}" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
           </div><!-- End Gallery Item -->
@@ -128,7 +119,7 @@
               <img src="{% static 'assets/img/gallery/gallery-2.jpg' %}" class="img-fluid" alt="">
               <div class="gallery-links d-flex align-items-center justify-content-center">
                 <a href="{% static 'assets/img/gallery/gallery-2.jpg' %}" title="Gallery 2" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="{%url 'gallery_single'%}" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="{%url 'people'%}" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
           </div><!-- End Gallery Item -->
@@ -138,7 +129,7 @@
               <img src="{% static 'assets/img/gallery/gallery-3.jpg' %}" class="img-fluid" alt="">
               <div class="gallery-links d-flex align-items-center justify-content-center">
                 <a href="{% static 'assets/img/gallery/gallery-3.jpg' %}" title="Gallery 3" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="{%url 'gallery_single'%}" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="{%url 'architecture'%}" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
           </div><!-- End Gallery Item -->
@@ -148,47 +139,27 @@
               <img src="{% static 'assets/img/gallery/gallery-4.jpg' %}" class="img-fluid" alt="">
               <div class="gallery-links d-flex align-items-center justify-content-center">
                 <a href="{% static 'assets/img/gallery/gallery-4.jpg' %}" title="Gallery 4" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="{%url 'gallery_single'%}" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="{%url 'animals'%}" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
           </div><!-- End Gallery Item -->
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="{% static 'assets/img/gallery/gallery-5.jpg' %}" class="img-fluid" alt="">
+              <img src="{% static 'assets/img/gallery/gallery-5.jpg' %}" class="img-fluid " alt="">
               <div class="gallery-links d-flex align-items-center justify-content-center">
                 <a href="{% static 'assets/img/gallery/gallery-5.jpg' %}" title="Gallery 5" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="{%url 'gallery_single'%}" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="{%url 'sports'%}" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
           </div><!-- End Gallery Item -->
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="{% static 'assets/img/gallery/gallery-6.jpg' %}" class="img-fluid" alt="">
+              <img src="{% static 'assets/img/gallery/img.png' %}" class="img-fluid h-100" alt="">
               <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="{% static 'assets/img/gallery/gallery-6.jpg' %}" title="Gallery 6" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="{%url 'gallery_single'%}" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Gallery Item -->
-
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="{% static 'assets/img/gallery/gallery-7.jpg' %}" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="{% static 'assets/img/gallery/gallery-7.jpg' %}" title="Gallery 7" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="{%url 'gallery_single'%}" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Gallery Item -->
-
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="{% static 'assets/img/gallery/gallery-8-2.jpg' %}" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="{% static 'assets/img/gallery/gallery-8-2.jpg' %}" title="Gallery 8" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="{%url 'gallery_single'%}" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="{% static 'assets/img/gallery/img.png' %}" title="Gallery 6" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                <a href="{%url 'travel'%}" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
           </div><!-- End Gallery Item -->
@@ -205,7 +176,7 @@
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">PhotoVista</strong> <span>All Rights Reserved</span></p>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">PixelVista</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
         <a href=""><i class="bi bi-twitter-x"></i></a>
